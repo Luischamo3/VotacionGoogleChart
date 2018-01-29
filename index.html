@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catalogo de votación</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadPage()">
+    <div class="container" id="inicio">
+        <div class="">
+            <!-- <div class="col s12 m3 l12"> -->
+            <nav aria-hidden="true">
+                <div class="nav-wrapper teal" aria-hidden="true">
+                    <img class="brand-logo right valign-wrapper " src="logo.png" alt="logo">
+                    <ul class="left hide-on-med-and-down" aria-hidden="true">
+                        <li>
+                            <a href="#inicio" aria-hidden="true" aria-label="Enlace para ir al inicio">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="resultados.html" aria-hidden="true" aria-label="Enlace para acceder a los gráficos">Gráfico</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- </div> -->
+            <!-- Slider -->
+        </div>
+        <div class="row" aria-label="Slider con imagenes">
+            <div class="col s12 m12 l12">
+                <div class="slider">
+                    <ul class="slides  valign-wrapper" id="diapositivas">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="col s12 m12 l12 left-align" aria-label="Conjunto de peliculas para votar">
+                <h1>VOTA ¿cual es tu plícula favorita?</h1>
+            </div>
+            <!-- Lista de carteles -->
+            <div class="row carteles" aria-label="Conjunto de peliculas para votar"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+    <script src="js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var defaults = {
+                indicators: false,
+                height: 400,
+                transition: 500,
+                interval: 3000
+            };
+            $('.slider').slider(defaults);
+        });  
+    </script>
+
+    <script src="js/data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
